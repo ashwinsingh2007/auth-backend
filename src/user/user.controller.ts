@@ -61,7 +61,7 @@ export class UserController {
     return this.userService.delete(id);
   }
 
-  @Get('me')
+  @Get('mydetails/me')
   @UseGuards(JwtAuthGuard)
   @ApiOperation({ summary: 'Get details of the authenticated user' })
   @ApiResponse({ status: 200, description: 'Details of the authenticated user.' })
